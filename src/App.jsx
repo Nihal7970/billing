@@ -5,9 +5,12 @@ import Dashlayout from "./module/Dashboard/Dashlayout"; // Import the new compon
 
 // import Selectitem from "../Billing/Selectitem";
 import Billinglayout from "./module/Billing/Billinglayout";
-import Master1 from "./module/Master/Master1";
-import Masterlayout from "./module/Master/Masterlayout";
 import Invoicedetail from "./Component/Dashboard/Invoicedetail";
+import MasterMain from "./module/Master/MasterMain";
+import CustomerList from "./module/Master/CustomerList";
+import ItemList from "./module/Master/ItemList";
+import AddCustomer from "./module/Master/AddCustomer";
+import AddItems from "./module/Master/AddItem";
 
 function App() {
   return (
@@ -15,10 +18,13 @@ function App() {
       <Routes>
         <Route path="/dashboard" element={<Dashlayout />} />
         <Route path="/dashboard/customer/:id" element={<Invoicedetail />} />
-        <Route path="/billing/home" element={<Billinglayout />} />
-        <Route path="/master" element={<Billinglayout />} />
-        <Route path="/master/add_customer" element={<Billinglayout />} />
-        <Route path="/master/add_item" element={<Billinglayout />} />
+        <Route path="/billing" element={<Billinglayout />} />
+        <Route path="/master" element={<MasterMain />} />
+        <Route path="/master/view_customers" element={<CustomerList />} />
+        <Route path="/master/view_items" element={<ItemList />} />
+
+        <Route path="/master/add_customer" element={<AddCustomer />} />
+        <Route path="/master/add_item" element={<AddItems />} />
 
         {/* Add more routes as needed */}
       </Routes>

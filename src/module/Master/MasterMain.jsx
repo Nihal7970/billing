@@ -1,8 +1,19 @@
-// InteractiveBoxes.jsx
+// MasterMain.jsx
 import React from "react";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
-const InteractiveBoxes = ({ onBoxClick }) => {
+const MasterMain = () => {
+  const navigate = useNavigate();
+
+  const onBoxClick = (type) => {
+    if (type === "customer") {
+      navigate("/master/view_customers");
+    } else if (type === "item") {
+      navigate("/master/view_items");
+    }
+  };
+
   return (
     <Box
       sx={{
@@ -26,7 +37,7 @@ const InteractiveBoxes = ({ onBoxClick }) => {
             backgroundColor: "#e0e0e0",
           },
         }}
-        onClick={() => onBoxClick("box1")}
+        onClick={() => onBoxClick("customer")}
       >
         <Typography variant="h6">CUSTOMER</Typography>
       </Box>
@@ -45,7 +56,7 @@ const InteractiveBoxes = ({ onBoxClick }) => {
             backgroundColor: "#e0e0e0",
           },
         }}
-        onClick={() => onBoxClick("box2")}
+        onClick={() => onBoxClick("item")}
       >
         <Typography variant="h6">ITEMS</Typography>
       </Box>
@@ -53,4 +64,4 @@ const InteractiveBoxes = ({ onBoxClick }) => {
   );
 };
 
-export default InteractiveBoxes;
+export default MasterMain;
