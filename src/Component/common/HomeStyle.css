@@ -1,0 +1,33 @@
+/* HomeStyle.css */
+
+.Nav {
+   width: 240px;
+   position: fixed;
+   top: 64px; /* Adjust to match Upperside height */
+   height: calc(100vh - 64px); /* Full height below Upperside */
+   /* background-color: lightgray; Example color */
+ }
+ 
+ .Upperside {
+   background-color: rgb(45, 45, 79); /* Example color */
+   height: 64px; /* Height of the top bar */
+ }
+ 
+ .main-content {
+   margin-left: 240px; /* Space for the side nav */
+   margin-top: 64px; /* Space for the top bar */
+   padding: 20px;
+   background-color: white; /* Example background */
+   height: calc(100vh - 64px); /* Full height below Upperside */
+   overflow-y: auto; /* Ensure content is scrollable if needed */
+ }
+ 
+ .dashboard {
+   margin-bottom:70px; /* Space between Dash and Input */
+ }
+ 
+ .input{
+   /* Add any specific styling for the input component if needed */
+
+ }
+ 

@@ -1,0 +1,12 @@
+/* Upperside.css */
+.Upperside {
+   position: fixed; /* Fixed to the top */
+   width: 100%; /* Full width of the viewport */
+   height: 64px; /* Height of the header */
+   background-color: rgb(45, 45, 79); /* Background color */
+   color: white; /* Text color */
+   top: 0; /* Align to the top of the viewport */
+   left: 0; /* Align to the left of the viewport */
+   z-index: 1000; /* Ensure it sits above other elements */
+ }
+ 

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "C00001",
+    "Name": "Gupta Enterprize Pvt. Ltd.",
+    "Address": "Gurgaon, Haryana",
+    "PAN": "BCNSG1234H",
+    "GST": "06BCNSG1234H1Z5",
+    "isActive": "Y"
+  },
+  {
+    "id": "C00002",
+    "Name": "Mahesh Industries Pvt. Ltd.",
+    "Address": "Delhi, Delhi",
+    "PAN": "AMNSM1234U",
+    "GST": "07AMNSM1234U1Z5",
+    "isActive": "Y"
+  },
+  {
+    "id": "C00003",
+    "Name": "Omkar and Brothers Pvt. Ltd.",
+    "Address": "Uttrakhand, Uttar Pradesh",
+    "PAN": "CNBSO1234S",
+    "GST": "05CNBSO1234S1Z5",
+    "isActive": "N"
+  },
+  {
+    "id": "C00004",
+    "Name": "Bhuwan Infotech.",
+    "Address": "Alwar, Rajasthan",
+    "PAN": "CMNSB1234A",
+    "GST": "08CMNSB1234A1Z5",
+    "isActive": "Y"
+  },
+  {
+    "id": "C00005",
+    "Name": "Swastik Software Pvt. Ltd.",
+    "Address": "Gurgaon, Haryana",
+    "PAN": "AGBCS1234B",
+    "GST": "06AGBCS1234B1Z5",
+    "isActive": "Y"
+  }
+]

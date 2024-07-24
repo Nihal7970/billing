@@ -1,0 +1,44 @@
+[
+  {
+    "id": "IT00001",
+    "Name": "Laptop",
+    "Price": "85000",
+    "isActive": "Y"
+  },
+  {
+    "id": "IT00002",
+    "Name": "LED Monito",
+    "Price": "13450",
+    "isActive": "Y"
+  },
+  {
+    "id": "IT00003",
+    "Name": "Pen Drive",
+    "Price": "980",
+    "isActive": "Y"
+  },
+  {
+    "id": "IT00004",
+    "Name": "Mobile",
+    "Price": "18900",
+    "isActive": "Y"
+  },
+  {
+    "id": "IT00005",
+    "Name": "Headphone",
+    "Price": "2350",
+    "isActive": "N"
+  },
+  {
+    "id": "IT00006",
+    "Name": "Bagpack",
+    "Price": "1200",
+    "isActive": "Y"
+  },
+  {
+    "id": "IT00007",
+    "Name": "Powerbank",
+    "Price": "1400",
+    "isActive": "Y"
+  }
+]

@@ -1,0 +1,9 @@
+/* SideNav.css */
+.Nav .MuiDrawer-paper {
+  width: 240px;          /* Width of the drawer */
+  top: 90px;             /* Space from the top of the viewport */
+  height: calc(100% - 80px); /* Adjust to fit the remaining height */
+  box-sizing: border-box;
+}
+.Nav .MuiListItemText-primary {
+  font-weight:bold ;}

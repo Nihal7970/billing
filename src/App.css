@@ -1,0 +1,15 @@
+/* AppStyle.css */
+
+.dashboard-container {
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .dashboard {
+   margin-bottom: 9px; /* Space below Dash component */
+ }
+ 
+ .input {
+   /* Add any specific styling for the Input component if needed */
+ }
+ 
