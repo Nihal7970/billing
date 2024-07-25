@@ -9,7 +9,7 @@ import {
   Paper,
   Button,
 } from "@mui/material";
-import customerData from "../../Data/customer.json";
+import customerData from "../../Data/item.json";
 import { useNavigate } from "react-router-dom";
 
 function createData(id, name, item, amount) {
