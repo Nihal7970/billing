@@ -3,6 +3,7 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
+import { Button, Typography } from "@mui/material";
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(2),
@@ -25,37 +26,49 @@ const items = [
 
 function Selectitem({ onBack }) {
   return (
-    <div
-      style={{
-        padding: 2,
-        height: "50vh",
-        borderRadius: 2,
+    <Box
+      sx={{
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        height: "90vh",
+        width: "80%",
+        background: "#fff",
+        padding: "18px",
         boxSizing: "border-box",
+        transform: "translate(-50%, -50%)",
+        justifyContent: "space-around",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
-      <Box sx={{ padding: 10 }}>
-        <h1>Select Item</h1>
-        <Grid container spacing={5}>
-          {items.map((item) => (
-            <Grid item xs={12} sm={6} key={item.id}>
-              <StyledPaper>
-                <h2>{item.name}</h2>
-                <button
-                  style={{
-                    backgroundColor:
-                      item.status === "Active" ? "darkgreen" : "red",
-                    marginTop: "60px",
-                  }}
-                >
-                  {item.status}
-                </button>
-              </StyledPaper>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
-
-      <div
+      <Typography variant="h5" sx={{ marginBottom: "18px" }}>
+        Select Item
+      </Typography>
+      <Grid container spacing={2}>
+        {items.map((item) => (
+          <Grid item xs={6} key={item.id}>
+            <Box
+              sx={{
+                padding: "12px",
+                display: "flex",
+                flexDirection: "column",
+                background: "#e5e5e5",
+              }}
+            >
+              <Typography variant="body2">{item.name}</Typography>
+              <Button
+                variant="contained"
+                color={item.status === "Active" ? "success" : "error"}
+                sx={{ marginTop: "8px" }}
+              >
+                {item.status}
+              </Button>
+            </Box>
+          </Grid>
+        ))}
+      </Grid>
+      <Box
         style={{
           display: "flex",
           justifyContent: "flex-end",
@@ -63,27 +76,14 @@ function Selectitem({ onBack }) {
           width: "100%",
         }}
       >
-        <button
-          style={{
-            backgroundColor: "red",
-            padding: "2px",
-            color: "white",
-          }}
-          onClick={onBack}
-        >
+        <Button variant="contained" color="error" onClick={onBack}>
           Cancel
-        </button>
-        <button
-          style={{
-            backgroundColor: "rgb(45, 45, 79)",
-            padding: "2px",
-            color: "white",
-          }}
-        >
+        </Button>
+        <Button variant="contained" color="success">
           Create
-        </button>
-      </div>
-    </div>
+        </Button>
+      </Box>
+    </Box>
   );
 }
 
