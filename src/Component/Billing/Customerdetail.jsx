@@ -4,7 +4,7 @@ import React from "react";
 import { Box, Typography, Paper, Button } from "@mui/material";
 import AddItems from "./AddItems";
 
-const CustomerDetails = ({ customer, onBack }) => {
+const CustomerDetails = ({ customer, onBack, onAddClick }) => {
   if (!customer) return <div>No customer selected</div>;
 
   return (
@@ -23,7 +23,7 @@ const CustomerDetails = ({ customer, onBack }) => {
         </Button> */}
         </Paper>
       </Box>
-      <AddItems />
+      <AddItems onAddClick={onAddClick} />
     </>
   );
 };

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Billing1 from "../../Component/Billing/Billing1";
 import Selectcustomer from "../../Component/Billing/Selectcustomer";
 import Customerdetails from "../../Component/Billing/Customerdetail";
-import AddItems from "../../Component/Billing/AddItems"; // Ensure correct capitalization and path
-import Selectitem from "../../Component/Billing/Selectitem"; // Ensure correct capitalization and path
+import Selectitem from "../../Component/Billing/Selectitem";
+import { Modal } from "@mui/material";
 
 function Billinglayout() {
   const [activeComponent, setActiveComponent] = useState("billing1");
@@ -31,8 +31,8 @@ function Billinglayout() {
     setActiveComponent("selectitem");
   };
 
-  const handleBackToAddItems = () => {
-    setActiveComponent("additems");
+  const handleBackToCustomerDetail = () => {
+    setActiveComponent("customerdetails");
   };
 
   return (
@@ -40,28 +40,22 @@ function Billinglayout() {
       {activeComponent === "billing1" && (
         <Billing1 onAddClick={handleAddClick} />
       )}
-
-      {activeComponent === "selectcustomer" && (
+      <Modal open={activeComponent === "selectcustomer"}>
         <Selectcustomer
           onSelectCustomer={handleCustomerSelect}
           onBack={handleBackToBilling}
         />
-      )}
-
+      </Modal>
       {activeComponent === "customerdetails" && (
         <Customerdetails
           customer={selectedCustomer}
           onBack={handleBackToCustomerList}
+          onAddClick={handleAddItemsClick}
         />
       )}
-
-      {activeComponent === "additems" && (
-        <AddItems onAddClick={handleAddItemsClick} />
-      )}
-
-      {activeComponent === "selectitem" && (
-        <Selectitem onBack={handleBackToAddItems} />
-      )}
+      <Modal open={activeComponent === "selectitem"}>
+        <Selectitem onBack={handleBackToCustomerDetail} />
+      </Modal>
     </div>
   );
 }
